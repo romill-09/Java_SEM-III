@@ -21,12 +21,19 @@ public class Shopping {
     public static void main(String args[])
     {
         Vector<Item> v = new Vector<Item> ();
+        
+        //command line interpreter
+        String nn = args[0];
+        int pp = Integer.parseInt(args[1]);
+        int qq = Integer.parseInt(args[2]);
+
+        v.add(new Item(nn, pp, qq));
         Scanner s = new Scanner(System.in);
 
         int choice;
 
         do {
-            System.out.println("Enter your choice\n 1.Remove element by name \n");
+            System.out.println("Enter your choice\n 1.Remove element by name \n 2.Add at end\n 3. Add at pos. \n 4.Display\n 5.Exit");
             choice = s.nextInt();
             switch(choice)
             {
